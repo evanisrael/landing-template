@@ -28,4 +28,9 @@ npm i cssnano --save-dev
 
 
 
-Add node_modules to gitignore
+"scripts": {
+    "build": "rm -rf dist && webpack --mode production",
+    "dev": "webpack serve",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
